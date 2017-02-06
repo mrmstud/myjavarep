@@ -3,9 +3,11 @@
  */
 package mrm.learn;
 
+import java.util.Arrays;
+import java.util.SortedSet;
+
 /**
- * @author mahallem
- *
+ * Implements Array related functionalities
  */
 public class ArrayTest {
 
@@ -15,30 +17,32 @@ public class ArrayTest {
 	public static void main(String[] args) {
 		
 		//sortIntAttay
-		sortIntArray(getIntArrays());
+		int[] sortedIntArr = sortIntArray(getIntArrays());
+		System.out.println("Sorted Int Array : "+Arrays.toString(sortedIntArr));
 		
 		//sortStringArray
-		sortStringArray(getStringArrays());
+		String[] sortStrArr = sortStringArray(getStringArrays());
+		System.out.println("Sorted String Array : "+ Arrays.toString(sortStrArr));
 	}
 
-	private static void sortStringArray(Object stringArrays) {
-		// TODO Auto-generated method stub
-		
+	private static String[] sortStringArray(String[] stringArrays) {
+		Arrays.sort(stringArrays);
+		return stringArrays;
 	}
 
-	private static Object getStringArrays() {
-		// TODO Auto-generated method stub
-		return null;
+	private static String[] getStringArrays() {
+		String[] strArr = {"sachin","viru","dravid","ganguly","yuvraj","dhoni","ashwin","jadeja","harbhajan","kumar"};
+		return strArr;
 	}
 
-	private static void sortIntArray(Object intArrays) {
-		// TODO Auto-generated method stub
-		
+	private static int[] sortIntArray(int[] intArrays) {
+		Arrays.sort(intArrays);
+		return intArrays;
 	}
 
-	private static Object getIntArrays() {
-		// TODO Auto-generated method stub
-		return null;
+	private static int[] getIntArrays() {
+		int[] numArr = {99,11,88,22,77,33,66,44,55,1,32};
+		return numArr;
 	}
 
 }
