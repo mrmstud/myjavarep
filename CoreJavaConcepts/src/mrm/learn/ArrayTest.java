@@ -18,7 +18,7 @@ public class ArrayTest {
 		
 		//sortIntAttay
 		int[] sortedIntArr = sortIntArray(getIntArrays());
-		System.out.println("Sorted Int Array : "+Arrays.toString(sortedIntArr));
+		System.out.println("Sorted Int Array : "+Arrays.toString(sortedIntArr)); // uses StringBuilder and its append method in the background.
 		
 		//sortStringArray
 		String[] sortStrArr = sortStringArray(getStringArrays());
@@ -26,7 +26,7 @@ public class ArrayTest {
 	}
 
 	private static String[] sortStringArray(String[] stringArrays) {
-		Arrays.sort(stringArrays);
+		Arrays.sort(stringArrays); // uses merge sort behind the scene
 		return stringArrays;
 	}
 
